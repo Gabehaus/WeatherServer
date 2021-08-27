@@ -37,11 +37,11 @@ app.post("/", async (req, res) => {
 
     //calc mode
     function getModes(array) {
-      var frequency = {} // array of frequency.
-      var maxFreq = 0 // holds the max frequency.
-      var modes = []
+      let frequency = {} // array of frequency.
+      let maxFreq = 0 // holds the max frequency.
+      let modes = []
 
-      for (var i in array) {
+      for (let i in array) {
         frequency[array[i]] = (frequency[array[i]] || 0) + 1 // increment frequency.
 
         if (frequency[array[i]] > maxFreq) {
