@@ -31,9 +31,9 @@ app.post("/", async (req, res) => {
       .map((elem, i) => Math.round(elem.main.temp))
 
     //calc average
-    const average = (
-      threeDayData.reduce((a, b) => a + b) / threeDayData.length
-    ).toString()
+    const average = (threeDayData.reduce((a, b) => a + b) / threeDayData.length)
+      .toFixed(1)
+      .toString()
 
     //calc mode
     function getModes(array) {
